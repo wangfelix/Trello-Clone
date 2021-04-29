@@ -6,17 +6,24 @@ import { CreateListBtn } from './components/CreateListBtn.js'
 
 function App() {
 
-  const [toDoLists, setToDoLists] = useState([{name: 'Erste Liste'}])
+  const [toDoLists, setToDoLists] = useState([{name: 'Erste Liste', id: 0}])
 
-  
+  function generateKey() {
+    return new Date().getTime().toString;
+  }
 
   return (
     <div className='App'>
       <NavBar></NavBar>
 
       <div className='todo-lists-container'>
-        {toDoLists.map(list => (
-          <ToDoList name={list.name}/>
+        {toDoLists.map((list) => (
+          <ToDoList
+            name={list.name}
+            setToDoLists={setToDoLists}
+            key={list.id}
+            id = {list.id}
+          />
         ))}
       </div>
 

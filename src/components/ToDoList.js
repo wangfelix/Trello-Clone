@@ -8,9 +8,16 @@ export const ToDoList = (props) => {
 
     const [tasks, setTasks] = useState([])
 
+    useEffect(() => {console.log(props.listKey)}, [])
+
     return (
         <div className='todo-list'>
-            <ListBar toDoListName = { props.name }/>
+            <ListBar
+                toDoListName = { props.name }
+                setToDoLists = { props.setToDoLists }
+                listKey = { props.key }
+                id = { props.id }
+            />
             <div className='bullet-point-container'>
                 {tasks.map(task => (
                     <BulletPoint task = { task }/>
@@ -24,12 +31,16 @@ export const ToDoList = (props) => {
 
 const ListBar = (props) => {
 
-    // useEffect(() => {setName('TODo List')}, [])
+    useEffect(() => {console.log("id of list: " + props.id)}, [])
+
+    const setName = () => {
+
+    }
 
     return (
         <div className='list-bar'>
             <h2>{ props.toDoListName }</h2>
-            {/* <input type='text' value={props.toDoListName}></input> */}
+            {/* <input type='text' value={setName}></input> */}
         </div>
     )
 }
