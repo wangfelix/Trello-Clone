@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import { ToDoList }  from './components/ToDoList.js'
+import { useState } from 'react';
+import { NavBar } from './components/NavBar.js'
+import { CreateListBtn } from './components/CreateListBtn.js'
 
 function App() {
+
+  const [toDoLists, setToDoLists] = useState([{name: 'Erste Liste'}])
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <NavBar></NavBar>
+
+      <div className='todo-lists-container'>
+        {toDoLists.map(list => (
+          <ToDoList name={list.name}/>
+        ))}
+      </div>
+
+      <CreateListBtn toDoLists={toDoLists} setToDoLists={setToDoLists}></CreateListBtn>
     </div>
   );
 }

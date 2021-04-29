@@ -1,0 +1,24 @@
+/* TextfieldAddTask */
+#textfield-add-task {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#textfield-add-task input {
+    height: 40px;
+    width: 100%;
+    border-style: solid;
+    border-radius: 10px 0 0 10px;
+    
+}
+
+.submit {
+    height: 40px;
+    border-radius: 0 10px 10px 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: solid;
+}
+

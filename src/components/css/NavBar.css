@@ -1,0 +1,11 @@
+/* Navbar */
+.navbar {
+    color: rgb(240, 242, 244);
+    background: rgb(88, 121, 158);
+    display: grid;
+    place-content: center;
+
+}
+.navbar > h1 {
+    margin: 0;
+}

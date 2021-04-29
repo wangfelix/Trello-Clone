@@ -1,0 +1,18 @@
+.create-new-list-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 20;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border-style: none;
+    background: rgb(224, 214, 65);
+    font-size: xx-large;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px #707070;
+}
+.create-new-list-btn:active {
+    font-size: x-large;
+    box-shadow: none;
+}
