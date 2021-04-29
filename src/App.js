@@ -20,6 +20,7 @@ function App() {
         {toDoLists.map((list) => (
           <ToDoList
             name={list.name}
+            toDoLists = {toDoLists}
             setToDoLists={setToDoLists}
             key={list.id}
             id = {list.id}

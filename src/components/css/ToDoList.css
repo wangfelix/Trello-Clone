@@ -14,6 +14,7 @@
     flex-shrink: 0
 }
 
+
 /* ListBar */
 .list-bar {
     background-color: var(--bg-color-list);
@@ -27,6 +28,13 @@
 }
 .list-bar > h2 {
     margin: 0;
+}
+.list-bar .list-title {
+    border-style: none;
+    font-size: x-large;
+    font-weight: bold;
+    background-color: var(--bg-color-list);
+    text-align: center;
 }
 
 
